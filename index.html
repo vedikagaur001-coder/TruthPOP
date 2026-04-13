@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TruthPop 💥</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    /* ── PASTE YOUR style.css CONTENTS HERE ── */
+  </style>
+</head>
+<body class="theme-warm">
+
+  <!-- THEME DOTS -->
+  <div class="theme-switcher" id="themeSwitcher">
+    <button class="theme-dot warm"    onclick="setTheme('warm')"    title="Warm"></button>
+    <button class="theme-dot dark"    onclick="setTheme('dark')"    title="Dark"></button>
+    <button class="theme-dot playful" onclick="setTheme('playful')" title="Playful"></button>
+    <button class="theme-dot calm"    onclick="setTheme('calm')"    title="Calm"></button>
+  </div>
+
+  <!-- SCREEN 1: SPLASH -->
+  <div class="screen" id="splashScreen">
+    <div class="splash-blob blob1"></div>
+    <div class="splash-blob blob2"></div>
+    <div class="splash-blob blob3"></div>
+    <div class="splash-content">
+      <div class="splash-logo">💥</div>
+      <h1 class="splash-title">TruthPop</h1>
+      <p class="splash-sub">Your voice tells a story.<br/>We just help you hear it.</p>
+      <div class="splash-dots"><span></span><span></span><span></span></div>
+    </div>
+  </div>
+
+  <!-- SCREEN 2: WALKTHROUGH -->
+  <div class="screen hidden" id="walkthroughScreen">
+    <div class="walkthrough-wrap">
+      <div class="wt-slide active" id="slide1">
+        <div class="wt-emoji">🎤</div>
+        <h2 class="wt-title">Speak Freely</h2>
+        <p class="wt-body">Press the big button and say anything. TruthPop listens without judgement.</p>
+      </div>
+      <div class="wt-slide" id="slide2">
+        <div class="wt-emoji">🧠</div>
+        <h2 class="wt-title">AI Analyses Your Voice</h2>
+        <p class="wt-body">Our AI reads your tone, speed, emotions and patterns in real time!</p>
+        <div class="wt-pills">
+          <span>😊 Happiness</span><span>💪 Confidence</span><span>😰 Stress</span>
+          <span>⚡ Excitement</span><span>🙈 Shyness</span><span>😔 Sadness</span>
+        </div>
+      </div>
+      <div class="wt-slide" id="slide3">
+        <div class="wt-emoji">📊</div>
+        <h2 class="wt-title">See Your Results</h2>
+        <p class="wt-body">Get a breakdown of 7 top emotions — plus a Truth-O-Meter!</p>
+        <div class="wt-meter-preview">
+          <span class="false-end">Deceptive</span>
+          <div class="preview-track"><div class="preview-thumb"></div></div>
+          <span class="true-end">Truthful</span>
+        </div>
+      </div>
+      <div class="wt-nav">
+        <div class="wt-nav-dots">
+          <span class="wt-dot active" onclick="goSlide(0)"></span>
+          <span class="wt-dot" onclick="goSlide(1)"></span>
+          <span class="wt-dot" onclick="goSlide(2)"></span>
+        </div>
+        <button class="wt-next-btn" id="wtNextBtn" onclick="nextSlide()">Next →</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCREEN 3: MAIN -->
+  <div class="screen hidden" id="mainScreen">
+    <header class="app-header">
+      <div class="app-logo">💥 <span>TruthPop</span></div>
+      <div class="header-tag">Voice Intelligence</div>
+    </header>
+    <main class="record-area">
+      <p class="record-hint" id="recordHint">Tap the button and start speaking</p>
+      <div class="waveform-container" id="waveformContainer">
+        <div class="waveform" id="waveform"></div>
+      </div>
+      <button class="record-btn" id="recordBtn" onclick="toggleRecord()">
+        <div class="record-btn-ring"></div>
+        <div class="record-btn-ring ring2"></div>
+        <span class="record-btn-icon" id="recordIcon">🎤</span>
+      </button>
+      <div class="record-timer" id="recordTimer">0:00</div>
+      <p class="record-status" id="recordStatus">Ready when you are ✨</p>
+    </main>
+    <nav class="bottom-nav">
+      <button class="nav-btn active" onclick="showTab('record')"><span>🎤</span><small>Record</small></button>
+      <button class="nav-btn" onclick="showTab('history')"><span>📋</span><small>History</small></button>
+      <button class="nav-btn" onclick="showTab('about')"><span>💡</span><small>About</small></button>
+    </nav>
+  </div>
+
+  <script>
+    // ── PASTE YOUR app.js CONTENTS HERE ──
+  </script>
+</body>
+</html>
